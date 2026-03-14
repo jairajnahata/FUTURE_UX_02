@@ -1,0 +1,152 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dental Paradise Color Palette */
+  --sky-blue: #4A9FD4;
+  --pearl-white: #F8FBFF;
+  --deep-navy: #1B3A5C;
+  --soft-aqua: #E3F4FB;
+  --warm-amber: #F5A623;
+  --mint-green: #5CC8A8;
+  --soft-lavender: #EEF0FB;
+  --slate-gray: #7A94A8;
+  --light-gray: #E0E0E0;
+  --soft-red: #F07070;
+
+  /* Mint Green shades for badges */
+  --mint-light-bg: #D4F5EC;
+  --mint-dark-text: #2A9D7A;
+
+  /* Font families */
+  --font-serif: 'Lora', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  /* Font sizes */
+  --font-size: 14px;
+  --text-h1: 26px;
+  --text-h2: 20px;
+  --text-h3: 16px;
+  --text-body: 14px;
+  --text-caption: 12px;
+  --text-button: 15px;
+
+  /* Original theme variables mapped to dental palette */
+  --background: var(--pearl-white);
+  --foreground: var(--deep-navy);
+  --card: #ffffff;
+  --card-foreground: var(--deep-navy);
+  --popover: #ffffff;
+  --popover-foreground: var(--deep-navy);
+  --primary: var(--sky-blue);
+  --primary-foreground: #ffffff;
+  --secondary: var(--soft-lavender);
+  --secondary-foreground: var(--deep-navy);
+  --muted: var(--soft-aqua);
+  --muted-foreground: var(--slate-gray);
+  --accent: var(--warm-amber);
+  --accent-foreground: #ffffff;
+  --destructive: var(--soft-red);
+  --destructive-foreground: #ffffff;
+  --border: var(--light-gray);
+  --input: var(--soft-aqua);
+  --input-background: var(--soft-aqua);
+  --switch-background: var(--light-gray);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --ring: var(--sky-blue);
+  --radius: 16px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 50px;
+
+  /* Custom dental paradise colors */
+  --color-sky-blue: var(--sky-blue);
+  --color-pearl-white: var(--pearl-white);
+  --color-deep-navy: var(--deep-navy);
+  --color-soft-aqua: var(--soft-aqua);
+  --color-warm-amber: var(--warm-amber);
+  --color-mint-green: var(--mint-green);
+  --color-soft-lavender: var(--soft-lavender);
+  --color-slate-gray: var(--slate-gray);
+  --color-light-gray: var(--light-gray);
+  --color-soft-red: var(--soft-red);
+  --color-mint-light-bg: var(--mint-light-bg);
+  --color-mint-dark-text: var(--mint-dark-text);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[var(--pearl-white)] text-[var(--deep-navy)];
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+  }
+
+  label {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-button);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
