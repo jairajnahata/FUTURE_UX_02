@@ -105,9 +105,22 @@ export function HomeScreen() {
       <div className="mb-6">
         <div className="px-5 mb-3 flex items-center justify-between">
           <h3 className="font-['Lora',serif] text-[var(--deep-navy)]">My Appointments</h3>
-          <span className="font-['DM_Sans',sans-serif] text-[var(--slate-gray)] text-xs">
-            {appointments.length} booked
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="font-['DM_Sans',sans-serif] text-[var(--slate-gray)] text-xs">
+              {appointments.length} booked
+            </span>
+            {appointments.length > 0 && (
+              <button
+                onClick={() => {
+                  sessionStorage.removeItem('appointments');
+                  setAppointments([]);
+                }}
+                className="font-['DM_Sans',sans-serif] text-xs text-[var(--soft-red)] border border-[var(--soft-red)] px-3 py-1 rounded-[20px]"
+              >
+                Clear All
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Empty State */}
